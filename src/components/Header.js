@@ -57,11 +57,11 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
   return (
-    <div className="bg-gradient-to-b from-black w-full flex justify-between z-30 absolute">
-      <img className="w-44" src={Logo} alt="Logo" />
+    <div className="bg-gradient-to-b from-black w-full flex flex-col z-30 absolute md:flex-row md:justify-between">
+      <img className="w-44 mx-auto md:mx-0" src={Logo} alt="Logo" />
 
       {user && (
-        <div className="flex mt-3">
+        <div className="flex mt-3 mx-auto md:mx-0">
           
             {showGPTSearch && <select className="bg-gray-400 text-black p-2 m-2 rounded-md"
             onChange={handleLanguageChange}>
@@ -80,7 +80,7 @@ const Header = () => {
            {showGPTSearch ? "HomePage" : "GPT Search"}
           </button>
 
-          <img className="w-12 h-12 p-2" alt="user Icon" src={user?.photoURL} />
+          <img className=" hidden w-12 h-12 p-2 md:inline-block" alt="user Icon" src={user?.photoURL} />
 
           <button
             className="font-bold text-white cursor-pointer"

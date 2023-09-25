@@ -1,13 +1,11 @@
 import Login from "./Login";
 import Browse from "./Browse";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
-
-import { useDispatch } from "react-redux";
+import MovieDetailsPage from "./MovieDetailsPage";
 
 
 const Body = () => {
-  const dispatch = useDispatch();
+
   
 
   const appRouter = createBrowserRouter([
@@ -18,6 +16,10 @@ const Body = () => {
     {
       path: "/browse",
       element: <Browse />,
+    },
+    {
+      path: "/browse/:movieId",
+      element: <MovieDetailsPage />,
     },
   ]);
 

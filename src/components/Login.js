@@ -45,7 +45,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/68709992?v=4",
+            photoURL: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png",
           })
             .then(() => {
               // Profile updated!
@@ -64,7 +64,7 @@ const Login = () => {
               // An error occurred
               // ...
             });
-          console.log(user);
+          // console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -100,12 +100,12 @@ const Login = () => {
   return (
     <div>
       <img
-        className="absolute"
+        className="fixed object-cover md:w-screen h-screen"
         src={Bg_Img} alt="Backgorund"
       />
       <Header />
       <form
-        className="absolute w-3/12 bg-black p-12 my-36 mx-auto right-0 left-0 rounded-lg text-white bg-opacity-75"
+        className="absolute w-11/12 md:w-3/12 bg-black p-12 my-36 mx-auto right-0 left-0 rounded-lg text-white bg-opacity-75"
         onSubmit={(e) => e.preventDefault()}
       >
         <h1 className="text-3xl p-4">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
