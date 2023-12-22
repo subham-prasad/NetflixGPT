@@ -1,2 +1,2 @@
 
-## Hosting URL: https://netflixgpt-ab398.web.app
+## Hosting URL: netflix-gpt-zeta-fawn.vercel.app
